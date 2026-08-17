@@ -19,4 +19,4 @@ My personal portfolio website with an animated login page.
 
 ## Author
 
-Hawanatu Kargbo
+Albert Taylor
