@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My First Website | Albert Taylor</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2980b9);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.page-wrapper { display: flex; align-items: center; gap: 40px; max-width: 900px; width: 100%; }
+.boy-scene { flex: 1; position: relative; min-width: 300px; height: 400px; }
+.desk { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 260px; height: 12px; background: #8B4513; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+.desk-leg-left, .desk-leg-right { position: absolute; bottom: 0; width: 10px; height: 50px; background: #8B4513; border-radius: 3px; }
+.desk-leg-left { left: calc(50% - 120px); }
+.desk-leg-right { left: calc(50% + 110px); }
+.laptop { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 120px; height: 80px; }
+.laptop-screen { width: 120px; height: 80px; background: #2c3e50; border-radius: 6px 6px 0 0; border: 3px solid #34495e; position: relative; overflow: hidden; }
+.laptop-base { width: 140px; height: 8px; background: #bdc3c7; border-radius: 0 0 6px 6px; position: absolute; bottom: 0; left: -10px; }
+.code-line { height: 4px; border-radius: 2px; margin: 8px 0 0 10px; opacity: 0; animation: typeCode 0.4s forwards; }
+.code-line:nth-child(1) { width: 60px; animation-delay: 0.3s; background: #2ecc71; }
+.code-line:nth-child(2) { width: 80px; animation-delay: 0.8s; background: #f1c40f; }
+.code-line:nth-child(3) { width: 50px; animation-delay: 1.3s; background: #e74c3c; }
+.code-line:nth-child(4) { width: 70px; animation-delay: 1.8s; background: #2ecc71; }
+.code-line:nth-child(5) { width: 45px; animation-delay: 2.3s; background: #f1c40f; }
+@keyframes typeCode { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+.boy { position: absolute; bottom: 32px; left: 50%; width: 100px; height: 200px; animation: breathe 3s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-50%) translateY(-3px); } }
+.head { width: 50px; height: 50px; background: #FDBCB4; border-radius: 50%; margin: 0 auto; position: relative; z-index: 5; }
+.hair { position: absolute; top: -8px; left: -4px; width: 58px; height: 30px; background: #3d2314; border-radius: 50% 50% 30% 30%; z-index: 6; }
+.eye { position: absolute; top: 22px; width: 5px; height: 5px; background: #333; border-radius: 50%; }
+.eye-left { left: 14px; } .eye-right { right: 14px; }
+.smile { position: absolute; top: 34px; left: 50%; transform: translateX(-50%); width: 16px; height: 8px; border-bottom: 2px solid #e88; border-radius: 0 0 50% 50%; }
+.body { width: 70px; height: 90px; background: #3498db; margin: -5px auto 0; border-radius: 20px 20px 10px 10px; position: relative; z-index: 4; }
+.arm { position: absolute; width: 14px; height: 55px; background: #FDBCB4; border-radius: 10px; z-index: 3; }
+.arm-typing { right: -8px; top: 30px; transform: rotate(15deg); transform-origin: top center; animation: typeArm 0.6s infinite alternate; }
+@keyframes typeArm { from { transform: rotate(15deg); } to { transform: rotate(25deg); } }
+.arm-bag { left: -8px; top: 30px; transform: rotate(-30deg); transform-origin: top center; }
+.legs { display: flex; justify-content: center; gap: 8px; margin-top: -5px; }
+.leg { width: 18px; height: 50px; background: #2c3e50; border-radius: 8px 8px 4px 4px; }
+.shoe { width: 22px; height: 8px; background: #1a1a1a; border-radius: 4px; margin: -2px auto 0; }
+.bag { position: absolute; bottom: 130px; left: -10px; width: 50px; height: 55px; background: #e67e22; border-radius: 12px 12px 8px 8px; z-index: 2; animation: bagSway 2s ease-in-out infinite alternate; }
+.bag-pocket { width: 35px; height: 20px; background: #d35400; border-radius: 8px; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); }
+.bag-zipper { width: 40px; height: 3px; background: #7f8c8d; border-radius: 2px; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); }
+.bag-strap { position: absolute; bottom: 185px; left: 2px; width: 6px; height: 55px; background: #d35400; border-radius: 3px; transform: rotate(-15deg); z-index: 1; }
+@keyframes bagSway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+.symbol { position: absolute; font-size: 18px; font-weight: bold; opacity: 0; animation: floatUp 3s infinite; }
+.symbol:nth-child(1) { left: 10px; color: #e74c3c; animation-delay: 0.5s; }
+.symbol:nth-child(2) { left: 80px; color: #f1c40f; animation-delay: 1.5s; }
+.symbol:nth-child(3) { right: 20px; color: #2ecc71; animation-delay: 2.5s; }
+.symbol:nth-child(4) { left: 150px; color: #9b59b6; animation-delay: 1.0s; }
+.symbol:nth-child(5) { right: 60px; color: #e67e22; animation-delay: 2.0s; }
+@keyframes floatUp { 0% { bottom: 40px; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { bottom: 380px; opacity: 0; } }
+.form-card { flex: 1; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.form-card h1 { color: #2c3e50; font-size: 28px; margin-bottom: 5px; }
+.form-card p { color: #7f8c8d; font-size: 14px; margin-bottom: 25px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; color: #2c3e50; font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+.form-group input { width: 100%; padding: 14px 16px; border: 2px solid #dcdde1; border-radius: 10px; font-size: 15px; font-family: inherit; color: #2c3e50; background: #f8f9fa; transition: border-color 0.3s, background 0.3s; }
+.form-group input:focus { outline: none; border-color: #3498db; background: white; }
+.btn-login { width: 100%; padding: 16px; background: #3498db; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.2s; margin-top: 10px; }
+.btn-login:hover { background: #2980b9; transform: translateY(-2px); }
+.social-row { display: flex; gap: 12px; margin-top: 15px; }
+.btn-social { flex: 1; padding: 12px; border: 2px solid #dcdde1; border-radius: 10px; background: white; font-size: 14px; cursor: pointer; text-align: center; transition: border-color 0.3s; }
+.btn-social:hover { border-color: #3498db; }
+.form-links { text-align: center; margin-top: 20px; font-size: 13px; color: #95a5a6; }
+.form-links a { color: #3498db; text-decoration: none; }
+.form-links a:hover { text-decoration: underline; }
+.back-link { text-align: center; margin-top: 20px; }
+.back-link a { color: white; text-decoration: none; font-size: 14px; opacity: 0.8; }
+.back-link a:hover { opacity: 1; }
+@media (max-width: 700px) { .page-wrapper { flex-direction: column; gap: 20px; } .boy-scene { min-width: 250px; height: 320px; } .form-card { padding: 25px; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="boy-scene">
+    <div class="symbol">&lt;/&gt;</div>
+    <div class="symbol">{ }</div>
+    <div class="symbol">()</div>
+    <div class="symbol">[ ]</div>
+    <div class="symbol">$</div>
+    <div class="desk"></div>
+    <div class="desk-leg-left"></div>
+    <div class="desk-leg-right"></div>
+    <div class="laptop">
+      <div class="laptop-screen">
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+      </div>
+      <div class="laptop-base"></div>
+    </div>
+    <div class="boy">
+      <div class="bag-strap"></div>
+      <div class="bag">
+        <div class="bag-zipper"></div>
+        <div class="bag-pocket"></div>
+      </div>
+      <div class="head">
+        <div class="hair"></div>
+        <div class="eye eye-left"></div>
+        <div class="eye eye-right"></div>
+        <div class="smile"></div>
+      </div>
+      <div class="body">
+        <div class="arm arm-bag"></div>
+        <div class="arm arm-typing"></div>
+      </div>
+      <div class="legs">
+        <div><div class="leg"></div><div class="shoe"></div></div>
+        <div><div class="leg"></div><div class="shoe"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="form-card">
+    <h1>My Portfolio</h1>
+    <p>My first web project — pure HTML and CSS animation. Author: Albert Taylor</p>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password">
+    </div>
+    <button class="btn-login">Login</button>
+    <div class="social-row">
+      <button class="btn-social">Google</button>
+      <button class="btn-social">GitHub</button>
+    </div>
+    <div class="form-links">
+      <a href="#">Forgot password?</a> &middot;
+      <a href="#">Create account</a>
+    </div>
+  </div>
+</div>
+<div class="back-link">
+  <a href="index.html">&larr; Back to Portfolio</a>
+</div>
+</body>
+</html>

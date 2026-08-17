@@ -10,229 +10,42 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(135deg, #0f0f23, #1a1a3e, #0f0f23);
-  min-height: 100vh;
-  color: #e0e0e0;
+  min-height: 100vh; color: #e0e0e0;
 }
 
-/* ========== LOGIN PAGE ========== */
-.login-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-}
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
 
-.page-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 900px;
-  width: 100%;
-}
-
-/* Animated boy scene */
-.boy-scene {
-  flex: 1;
-  position: relative;
-  min-width: 300px;
-  height: 400px;
-}
-.desk {
-  position: absolute; bottom: 20px; left: 50%;
-  transform: translateX(-50%); width: 260px; height: 12px;
-  background: #8B4513; border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-.desk-leg-left, .desk-leg-right {
-  position: absolute; bottom: 0; width: 10px; height: 50px;
-  background: #8B4513; border-radius: 3px;
-}
-.desk-leg-left { left: calc(50% - 120px); }
-.desk-leg-right { left: calc(50% + 110px); }
-.laptop {
-  position: absolute; bottom: 32px; left: 50%;
-  transform: translateX(-50%); width: 120px; height: 80px;
-}
-.laptop-screen {
-  width: 120px; height: 80px; background: #2c3e50;
-  border-radius: 6px 6px 0 0; border: 3px solid #34495e;
-  position: relative; overflow: hidden;
-}
-.laptop-base {
-  width: 140px; height: 8px; background: #bdc3c7;
-  border-radius: 0 0 6px 6px; position: absolute; bottom: 0; left: -10px;
-}
-.code-line {
-  height: 4px; border-radius: 2px; margin: 8px 0 0 10px; opacity: 0;
-  animation: typeCode 0.4s forwards;
-}
-.code-line:nth-child(1) { width: 60px; animation-delay: 0.3s; background: #2ecc71; }
-.code-line:nth-child(2) { width: 80px; animation-delay: 0.8s; background: #f1c40f; }
-.code-line:nth-child(3) { width: 50px; animation-delay: 1.3s; background: #e74c3c; }
-.code-line:nth-child(4) { width: 70px; animation-delay: 1.8s; background: #2ecc71; }
-.code-line:nth-child(5) { width: 45px; animation-delay: 2.3s; background: #f1c40f; }
-@keyframes typeCode {
-  from { opacity: 0; transform: translateX(-10px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-.boy {
-  position: absolute; bottom: 32px; left: 50%; width: 100px; height: 200px;
-  animation: breathe 3s ease-in-out infinite alternate;
-}
-@keyframes breathe {
-  from { transform: translateX(-50%) translateY(0); }
-  to { transform: translateX(-50%) translateY(-3px); }
-}
-.head {
-  width: 50px; height: 50px; background: #FDBCB4; border-radius: 50%;
-  margin: 0 auto; position: relative; z-index: 5;
-}
-.hair {
-  position: absolute; top: -8px; left: -4px; width: 58px; height: 30px;
-  background: #3d2314; border-radius: 50% 50% 30% 30%; z-index: 6;
-}
-.eye { position: absolute; top: 22px; width: 5px; height: 5px; background: #333; border-radius: 50%; }
-.eye-left { left: 14px; } .eye-right { right: 14px; }
-.smile {
-  position: absolute; top: 34px; left: 50%; transform: translateX(-50%);
-  width: 16px; height: 8px; border-bottom: 2px solid #e88; border-radius: 0 0 50% 50%;
-}
-.body {
-  width: 70px; height: 90px; background: #3498db; margin: -5px auto 0;
-  border-radius: 20px 20px 10px 10px; position: relative; z-index: 4;
-}
-.arm {
-  position: absolute; width: 14px; height: 55px; background: #FDBCB4;
-  border-radius: 10px; z-index: 3;
-}
-.arm-typing {
-  right: -8px; top: 30px; transform: rotate(15deg); transform-origin: top center;
-  animation: typeArm 0.6s infinite alternate;
-}
-@keyframes typeArm {
-  from { transform: rotate(15deg); }
-  to { transform: rotate(25deg); }
-}
-.arm-bag { left: -8px; top: 30px; transform: rotate(-30deg); transform-origin: top center; }
-.legs { display: flex; justify-content: center; gap: 8px; margin-top: -5px; }
-.leg { width: 18px; height: 50px; background: #2c3e50; border-radius: 8px 8px 4px 4px; }
-.shoe { width: 22px; height: 8px; background: #1a1a1a; border-radius: 4px; margin: -2px auto 0; }
-.bag {
-  position: absolute; bottom: 130px; left: -10px; width: 50px; height: 55px;
-  background: #e67e22; border-radius: 12px 12px 8px 8px; z-index: 2;
-  animation: bagSway 2s ease-in-out infinite alternate;
-}
-.bag-pocket {
-  width: 35px; height: 20px; background: #d35400; border-radius: 8px;
-  position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
-}
-.bag-zipper {
-  width: 40px; height: 3px; background: #7f8c8d; border-radius: 2px;
-  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-}
-.bag-strap {
-  position: absolute; bottom: 185px; left: 2px; width: 6px; height: 55px;
-  background: #d35400; border-radius: 3px; transform: rotate(-15deg); z-index: 1;
-}
-@keyframes bagSway {
-  from { transform: rotate(-3deg); }
-  to { transform: rotate(3deg); }
-}
-.symbol {
-  position: absolute; font-size: 18px; font-weight: bold; opacity: 0;
-  animation: floatUp 3s infinite;
-}
-.symbol:nth-child(1) { left: 10px; color: #e74c3c; animation-delay: 0.5s; }
-.symbol:nth-child(2) { left: 80px; color: #f1c40f; animation-delay: 1.5s; }
-.symbol:nth-child(3) { right: 20px; color: #2ecc71; animation-delay: 2.5s; }
-.symbol:nth-child(4) { left: 150px; color: #9b59b6; animation-delay: 1.0s; }
-.symbol:nth-child(5) { right: 60px; color: #e67e22; animation-delay: 2.0s; }
-@keyframes floatUp {
-  0% { bottom: 40px; opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { bottom: 380px; opacity: 0; }
-}
-
-/* Login form */
-.form-card {
-  flex: 1; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 40px; border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-.form-card h1 { color: #6dd5ed; font-size: 28px; margin-bottom: 5px; }
-.form-card .subtitle { color: #95a5a6; font-size: 14px; margin-bottom: 25px; }
-.form-group { margin-bottom: 20px; }
-.form-group label {
-  display: block; color: #bdc3c7; font-size: 14px; font-weight: bold; margin-bottom: 8px;
-}
-.form-group input {
-  width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.1);
-  border-radius: 10px; font-size: 15px; font-family: inherit;
-  color: #e0e0e0; background: rgba(255,255,255,0.05);
-  transition: border-color 0.3s, background 0.3s;
-}
-.form-group input:focus {
-  outline: none; border-color: #3498db; background: rgba(255,255,255,0.08);
-}
-.form-group input::placeholder { color: #555; }
-.btn-login {
-  width: 100%; padding: 16px; background: linear-gradient(135deg, #3498db, #2980b9);
-  color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold;
-  cursor: pointer; transition: transform 0.2s, box-shadow 0.3s; margin-top: 10px;
-}
-.btn-login:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(52,152,219,0.3); }
-.btn-login:disabled { opacity: 0.6; cursor: wait; }
-.social-row { display: flex; gap: 12px; margin-top: 15px; }
-.btn-social {
-  flex: 1; padding: 12px; border: 2px solid rgba(255,255,255,0.1);
-  border-radius: 10px; background: transparent; font-size: 14px;
-  cursor: pointer; text-align: center; color: #bdc3c7;
-  transition: border-color 0.3s, background 0.3s;
-}
-.btn-social:hover { border-color: #3498db; background: rgba(52,152,219,0.1); }
-.form-links { text-align: center; margin-top: 20px; font-size: 13px; color: #7f8c8d; }
-.form-links a { color: #3498db; text-decoration: none; cursor: pointer; }
-.form-links a:hover { text-decoration: underline; }
-.alert-msg {
-  padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 13px;
-  display: none;
-}
-.alert-error { background: rgba(231,76,60,0.15); border: 1px solid #e74c3c; color: #e74c3c; }
-.alert-success { background: rgba(46,204,113,0.15); border: 1px solid #2ecc71; color: #2ecc71; }
-
-/* ========== DASHBOARD ========== */
-.dashboard { display: none; padding: 20px; max-width: 1000px; margin: 0 auto; }
-.dashboard.show { display: block; }
-.login-page.hide { display: none; }
-
+/* Navbar */
 .navbar {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 15px 0; margin-bottom: 30px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px;
 }
 .navbar h2 { color: #6dd5ed; font-size: 22px; }
-.nav-user { display: flex; align-items: center; gap: 15px; }
-.nav-user span { color: #bdc3c7; font-size: 14px; }
-.btn-logout {
-  padding: 8px 16px; background: rgba(231,76,60,0.2); border: 1px solid #e74c3c;
-  color: #e74c3c; border-radius: 8px; cursor: pointer; font-size: 13px;
-  transition: background 0.3s;
+.navbar .nav-links a {
+  color: #bdc3c7; text-decoration: none; font-size: 14px; margin-left: 20px;
+  transition: color 0.3s;
 }
-.btn-logout:hover { background: rgba(231,76,60,0.4); }
+.navbar .nav-links a:hover { color: #6dd5ed; }
 
-.welcome-banner {
+/* Hero */
+.hero {
   background: linear-gradient(135deg, rgba(52,152,219,0.15), rgba(155,89,182,0.15));
   border: 1px solid rgba(52,152,219,0.2); border-radius: 16px;
-  padding: 30px; margin-bottom: 30px;
+  padding: 40px; margin-bottom: 30px; text-align: center;
 }
-.welcome-banner h3 { color: #6dd5ed; font-size: 24px; margin-bottom: 8px; }
-.welcome-banner p { color: #95a5a6; font-size: 14px; }
+.hero h1 { color: #6dd5ed; font-size: 32px; margin-bottom: 10px; }
+.hero p { color: #95a5a6; font-size: 15px; max-width: 600px; margin: 0 auto 15px; }
+.hero .hero-tags {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 15px;
+}
+.hero .hero-tags span {
+  padding: 6px 14px; background: rgba(52,152,219,0.15); border-radius: 12px;
+  font-size: 13px; color: #6dd5ed;
+}
 
+/* Stats */
 .stats-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px; margin-bottom: 30px;
 }
 .stat-card {
@@ -243,10 +56,12 @@ body {
 .stat-card .stat-value { color: #6dd5ed; font-size: 24px; font-weight: bold; }
 .stat-card .stat-label { color: #7f8c8d; font-size: 12px; margin-top: 4px; }
 
+/* Section */
 .section-title { color: #6dd5ed; font-size: 20px; margin-bottom: 15px; }
 
+/* Projects */
 .projects-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px; margin-bottom: 40px;
 }
 .project-card {
@@ -254,6 +69,11 @@ body {
   border-radius: 16px; padding: 25px; transition: transform 0.2s, border-color 0.3s;
 }
 .project-card:hover { transform: translateY(-3px); border-color: #3498db; }
+.project-card .proj-number {
+  display: inline-block; background: rgba(52,152,219,0.2); color: #6dd5ed;
+  width: 28px; height: 28px; border-radius: 50%; text-align: center;
+  line-height: 28px; font-size: 13px; font-weight: bold; margin-bottom: 10px;
+}
 .project-card h4 { color: #e0e0e0; font-size: 18px; margin-bottom: 8px; }
 .project-card p { color: #95a5a6; font-size: 13px; margin-bottom: 12px; line-height: 1.5; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
@@ -266,28 +86,35 @@ body {
   padding: 6px 14px; border-radius: 8px; font-size: 12px;
   text-decoration: none; transition: background 0.3s;
 }
-.link-code {
-  background: rgba(255,255,255,0.1); color: #bdc3c7;
-}
+.link-code { background: rgba(255,255,255,0.1); color: #bdc3c7; }
 .link-code:hover { background: rgba(255,255,255,0.2); }
-.link-demo {
-  background: rgba(46,204,113,0.2); color: #2ecc71;
-}
+.link-demo { background: rgba(46,204,113,0.2); color: #2ecc71; }
 .link-demo:hover { background: rgba(46,204,113,0.35); }
 .link-demo.disabled { opacity: 0.3; pointer-events: none; }
 
-/* Contact form */
+/* Contact */
 .contact-section {
   background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px; padding: 30px; margin-bottom: 30px;
 }
 .contact-row { display: flex; gap: 15px; }
 .contact-row .form-group { flex: 1; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; color: #bdc3c7; font-size: 14px; font-weight: bold; margin-bottom: 8px;
+}
+.form-group input {
+  width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 10px; font-size: 15px; font-family: inherit;
+  color: #e0e0e0; background: rgba(255,255,255,0.05);
+  transition: border-color 0.3s, background 0.3s;
+}
+.form-group input:focus { outline: none; border-color: #3498db; background: rgba(255,255,255,0.08); }
+.form-group input::placeholder { color: #555; }
 .contact-section textarea {
   width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.1);
   border-radius: 10px; font-size: 15px; font-family: inherit;
-  color: #e0e0e0; background: rgba(255,255,255,0.05); resize: vertical;
-  min-height: 100px;
+  color: #e0e0e0; background: rgba(255,255,255,0.05); resize: vertical; min-height: 100px;
 }
 .contact-section textarea:focus { outline: none; border-color: #3498db; }
 .contact-section textarea::placeholder { color: #555; }
@@ -299,10 +126,11 @@ body {
 .btn-contact:hover { transform: translateY(-2px); }
 .btn-contact:disabled { opacity: 0.6; cursor: wait; }
 
-.footer {
-  text-align: center; padding: 20px; color: #555; font-size: 13px;
-  border-top: 1px solid rgba(255,255,255,0.05); margin-top: 20px;
+.alert-msg {
+  padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; display: none;
 }
+.alert-success { background: rgba(46,204,113,0.15); border: 1px solid #2ecc71; color: #2ecc71; }
+.alert-error { background: rgba(231,76,60,0.15); border: 1px solid #e74c3c; color: #e74c3c; }
 
 .loading-spinner {
   display: inline-block; width: 16px; height: 16px;
@@ -311,118 +139,52 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Demo credentials box */
-.demo-box {
-  margin-top: 15px; padding: 12px; background: rgba(241,196,15,0.1);
-  border: 1px solid rgba(241,196,15,0.3); border-radius: 8px;
-  font-size: 12px; color: #f1c40f;
+.footer {
+  text-align: center; padding: 20px; color: #555; font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.05); margin-top: 20px;
 }
-.demo-box code { color: #fff; font-family: monospace; }
 
 @media (max-width: 700px) {
-  .page-wrapper { flex-direction: column; gap: 20px; }
-  .boy-scene { min-width: 250px; height: 320px; }
-  .form-card { padding: 25px; }
   .contact-row { flex-direction: column; }
+  .hero { padding: 25px; }
+  .hero h1 { font-size: 24px; }
 }
 </style>
 </head>
 <body>
-
-<!-- LOGIN PAGE -->
-<div class="login-page" id="loginPage">
-  <div class="page-wrapper">
-    <div class="boy-scene">
-      <div class="symbol">&lt;/&gt;</div>
-      <div class="symbol">{ }</div>
-      <div class="symbol">()</div>
-      <div class="symbol">[ ]</div>
-      <div class="symbol">$</div>
-      <div class="desk"></div>
-      <div class="desk-leg-left"></div>
-      <div class="desk-leg-right"></div>
-      <div class="laptop">
-        <div class="laptop-screen">
-          <div class="code-line"></div>
-          <div class="code-line"></div>
-          <div class="code-line"></div>
-          <div class="code-line"></div>
-          <div class="code-line"></div>
-        </div>
-        <div class="laptop-base"></div>
-      </div>
-      <div class="boy">
-        <div class="bag-strap"></div>
-        <div class="bag">
-          <div class="bag-zipper"></div>
-          <div class="bag-pocket"></div>
-        </div>
-        <div class="head">
-          <div class="hair"></div>
-          <div class="eye eye-left"></div>
-          <div class="eye eye-right"></div>
-          <div class="smile"></div>
-        </div>
-        <div class="body">
-          <div class="arm arm-bag"></div>
-          <div class="arm arm-typing"></div>
-        </div>
-        <div class="legs">
-          <div><div class="leg"></div><div class="shoe"></div></div>
-          <div><div class="leg"></div><div class="shoe"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-card">
-      <h1>Albert Taylor</h1>
-      <p class="subtitle">Developer | Cybersecurity | AI Systems</p>
-
-      <div class="alert-msg" id="alertMsg"></div>
-
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" id="emailInput" placeholder="your@email.com" value="albert@portfolio.dev">
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" id="passwordInput" placeholder="Enter your password" value="portfolio2026">
-      </div>
-      <button class="btn-login" id="loginBtn" onclick="handleLogin()">Login</button>
-
-      <div class="social-row">
-        <button class="btn-social" onclick="handleGuest()">Continue as Guest</button>
-        <button class="btn-social" onclick="handleRegister()">Create Account</button>
-      </div>
-
-      <div class="demo-box">
-        Demo: <code>albert@portfolio.dev</code> / <code>portfolio2026</code>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DASHBOARD -->
-<div class="dashboard" id="dashboard">
+<div class="container">
   <div class="navbar">
-    <h2>Albert Taylor | Portfolio</h2>
-    <div class="nav-user">
-      <span id="navUserName">Welcome</span>
-      <button class="btn-logout" onclick="handleLogout()">Logout</button>
+    <h2>Albert Taylor</h2>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/crptoangel232" target="_blank">GitHub</a>
     </div>
   </div>
 
-  <div class="welcome-banner">
-    <h3 id="welcomeName">Welcome back!</h3>
-    <p>Cybersecurity | AI/ML | Trading Systems | Frontend | Social Impact — Sierra Leone</p>
+  <div class="hero">
+    <h1>Albert Taylor</h1>
+    <p>Developer from Sierra Leone building cybersecurity tools, AI platforms, trading systems, and web apps. This portfolio connects all my projects in one place.</p>
+    <div class="hero-tags">
+      <span>Cybersecurity</span>
+      <span>AI / ML</span>
+      <span>Trading Systems</span>
+      <span>Frontend</span>
+      <span>Social Impact</span>
+    </div>
   </div>
 
-  <div class="stats-grid" id="statsGrid"></div>
+  <div class="stats-grid" id="statsGrid">
+    <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">6</div><div class="stat-label">Projects</div></div>
+    <div class="stat-card"><div class="stat-icon">💻</div><div class="stat-value">5</div><div class="stat-label">Languages</div></div>
+    <div class="stat-card"><div class="stat-icon">🌐</div><div class="stat-value">4</div><div class="stat-label">Live Demos</div></div>
+    <div class="stat-card"><div class="stat-icon">🌍</div><div class="stat-value">SL</div><div class="stat-label">Based In</div></div>
+  </div>
 
-  <h3 class="section-title">Projects</h3>
+  <h3 class="section-title" id="projects">Projects</h3>
   <div class="projects-grid" id="projectsGrid"></div>
 
-  <div class="contact-section">
+  <div class="contact-section" id="contact">
     <h3 class="section-title">Get in Touch</h3>
     <div class="alert-msg" id="contactAlert"></div>
     <div class="contact-row">
@@ -448,172 +210,89 @@ body {
 </div>
 
 <script>
-const API_LOGIN = "https://solene-18a0e0a8.base44.app/functions/portfolioLogin";
 const API_PORTFOLIO = "https://solene-18a0e0a8.base44.app/functions/portfolioApi";
+const API_LOGIN = "https://solene-18a0e0a8.base44.app/functions/portfolioLogin";
 
+// All projects with demo links
+const projects = [
+  {
+    num: 1,
+    name: "PhishGuard",
+    description: "10-tool cybersecurity suite for ethical hacking, SOC analysis, and incident response. Includes phishing detector, port scanner, password auditor, mini-SIEM dashboard, and more.",
+    tags: ["Cybersecurity", "Python", "JavaScript", "SIEM"],
+    code: "https://github.com/crptoangel232/phishguard",
+    demo: "https://crptoangel232.github.io/phishguard/"
+  },
+  {
+    num: 2,
+    name: "Oracle Trading Engine",
+    description: "Autonomous AI trading platform with multi-strategy analysis, risk management, and broker integration. 16 entities, 10 strategies, paper-to-live progression.",
+    tags: ["AI", "Trading", "Base44", "Risk Management"],
+    code: "https://github.com/crptoangel232/oracle-trading-engine",
+    demo: "https://crptoangel232.github.io/oracle-trading-engine/"
+  },
+  {
+    num: 3,
+    name: "Oswok AI",
+    description: "AI-powered economic mobility engine for Africa. WhatsApp-based workforce OS for skill discovery, micro-learning, verified tasks, and Digital Work Passport.",
+    tags: ["AI", "Social Impact", "WhatsApp", "Sierra Leone"],
+    code: "https://github.com/crptoangel232/oswok-ai",
+    demo: "https://crptoangel232.github.io/oswok-ai/"
+  },
+  {
+    num: 4,
+    name: "hushBox",
+    description: "Movie discovery app built with vanilla HTML, CSS, and JavaScript using the TMDB API. Search, browse, and discover films.",
+    tags: ["Frontend", "Movies", "TMDB API", "JavaScript"],
+    code: "https://github.com/crptoangel232/hushbox",
+    demo: "https://crptoangel232.github.io/hushbox/"
+  },
+  {
+    num: 5,
+    name: "My First Website",
+    description: "My very first web project — an animated login page featuring a boy coding at a desk with a backpack. Built with pure HTML and CSS, no JavaScript. This is where it all started.",
+    tags: ["HTML", "CSS", "Animation", "Beginner"],
+    code: "https://github.com/crptoangel232/My-Portfolio-Website",
+    demo: "first-website.html"
+  },
+  {
+    num: 6,
+    name: "MAMIE",
+    description: "An education system built on a verified network. Connecting learners with verified educational content and pathways.",
+    tags: ["AI", "Education", "TypeScript"],
+    code: "https://github.com/crptoangel232/MAMIE",
+    demo: null
+  }
+];
+
+// Render projects
+function renderProjects() {
+  const grid = document.getElementById("projectsGrid");
+  grid.innerHTML = projects.map(p => `
+    <div class="project-card">
+      <span class="proj-number">${p.num}</span>
+      <h4>${p.name}</h4>
+      <p>${p.description}</p>
+      <div class="project-tags">
+        ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+      </div>
+      <div class="project-links">
+        <a href="${p.code}" target="_blank" class="link-code">View Code</a>
+        ${p.demo
+          ? `<a href="${p.demo}" ${p.demo.startsWith("http") ? 'target="_blank"' : ''} class="link-demo">Live Demo</a>`
+          : `<span class="link-demo disabled">No Demo</span>`}
+      </div>
+    </div>
+  `).join("");
+}
+
+// Contact form
 function showAlert(elementId, message, isError) {
   const el = document.getElementById(elementId);
   el.textContent = message;
   el.className = "alert-msg " + (isError ? "alert-error" : "alert-success");
   el.style.display = "block";
   setTimeout(() => { el.style.display = "none"; }, 5000);
-}
-
-async function handleLogin() {
-  const email = document.getElementById("emailInput").value.trim();
-  const password = document.getElementById("passwordInput").value.trim();
-  const btn = document.getElementById("loginBtn");
-
-  if (!email || !password) {
-    showAlert("alertMsg", "Please enter email and password", true);
-    return;
-  }
-
-  btn.disabled = true;
-  btn.innerHTML = '<span class="loading-spinner"></span>Logging in...';
-
-  try {
-    const res = await fetch(API_LOGIN, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "login", email, password })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      showAlert("alertMsg", "Login successful! Loading dashboard...", false);
-      showDashboard(data.user);
-    } else {
-      showAlert("alertMsg", data.message || "Login failed", true);
-      btn.disabled = false;
-      btn.innerHTML = "Login";
-    }
-  } catch (err) {
-    showAlert("alertMsg", "Connection error: " + err.message, true);
-    btn.disabled = false;
-    btn.innerHTML = "Login";
-  }
-}
-
-async function handleGuest() {
-  const btn = event.target;
-  btn.disabled = true;
-  btn.innerHTML = '<span class="loading-spinner"></span>Loading...';
-
-  try {
-    const res = await fetch(API_LOGIN, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "guest" })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      showDashboard(data.user);
-    } else {
-      showAlert("alertMsg", data.message || "Failed", true);
-      btn.disabled = false;
-      btn.innerHTML = "Continue as Guest";
-    }
-  } catch (err) {
-    showAlert("alertMsg", "Connection error: " + err.message, true);
-    btn.disabled = false;
-    btn.innerHTML = "Continue as Guest";
-  }
-}
-
-async function handleRegister() {
-  const email = document.getElementById("emailInput").value.trim();
-  const password = document.getElementById("passwordInput").value.trim();
-
-  if (!email || !password) {
-    showAlert("alertMsg", "Please enter email and password to register", true);
-    return;
-  }
-
-  try {
-    const res = await fetch(API_LOGIN, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "register", email, password })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      showAlert("alertMsg", "Account created! You can now login.", false);
-    } else {
-      showAlert("alertMsg", data.message || "Registration failed", true);
-    }
-  } catch (err) {
-    showAlert("alertMsg", "Connection error: " + err.message, true);
-  }
-}
-
-function showDashboard(user) {
-  document.getElementById("loginPage").classList.add("hide");
-  document.getElementById("dashboard").classList.add("show");
-  document.getElementById("navUserName").textContent = "Welcome, " + (user.name || "Visitor");
-  document.getElementById("welcomeName").textContent = "Welcome, " + (user.name || "Visitor") + "!";
-
-  loadStats();
-  loadProjects();
-}
-
-function handleLogout() {
-  document.getElementById("dashboard").classList.remove("show");
-  document.getElementById("loginPage").classList.remove("hide");
-  document.getElementById("loginBtn").disabled = false;
-  document.getElementById("loginBtn").innerHTML = "Login";
-}
-
-async function loadStats() {
-  try {
-    const res = await fetch(API_PORTFOLIO, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "stats" })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      const s = data.stats;
-      const grid = document.getElementById("statsGrid");
-      grid.innerHTML = `
-        <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">${s.totalProjects}</div><div class="stat-label">Projects</div></div>
-        <div class="stat-card"><div class="stat-icon">📚</div><div class="stat-value">${s.totalRepos}</div><div class="stat-label">Repositories</div></div>
-        <div class="stat-card"><div class="stat-icon">💻</div><div class="stat-value">${s.languages.length}</div><div class="stat-label">Languages</div></div>
-        <div class="stat-card"><div class="stat-icon">🌍</div><div class="stat-value">${s.location}</div><div class="stat-label">Based In</div></div>
-      `;
-    }
-  } catch (err) { console.error("Stats error:", err); }
-}
-
-async function loadProjects() {
-  try {
-    const res = await fetch(API_LOGIN, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "projects" })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      const grid = document.getElementById("projectsGrid");
-      grid.innerHTML = data.projects.map(p => `
-        <div class="project-card">
-          <h4>${p.name}</h4>
-          <p>${p.description}</p>
-          <div class="project-tags">
-            ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
-          </div>
-          <div class="project-links">
-            <a href="${p.url}" target="_blank" class="link-code">View Code</a>
-            ${p.demo ? `<a href="${p.demo}" target="_blank" class="link-demo">Live Demo</a>` : `<span class="link-demo disabled">No Demo</span>`}
-          </div>
-        </div>
-      `).join("");
-    }
-  } catch (err) { console.error("Projects error:", err); }
 }
 
 async function handleContact() {
@@ -654,10 +333,8 @@ async function handleContact() {
   btn.innerHTML = "Send Message";
 }
 
-// Enter key to login
-document.getElementById("passwordInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") handleLogin();
-});
+// Init
+renderProjects();
 </script>
 </body>
 </html>
