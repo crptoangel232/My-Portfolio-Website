@@ -175,9 +175,9 @@ body {
   </div>
 
   <div class="stats-grid" id="statsGrid">
-    <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">6</div><div class="stat-label">Projects</div></div>
-    <div class="stat-card"><div class="stat-icon">💻</div><div class="stat-value">5</div><div class="stat-label">Languages</div></div>
-    <div class="stat-card"><div class="stat-icon">🌐</div><div class="stat-value">4</div><div class="stat-label">Live Demos</div></div>
+    <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">12</div><div class="stat-label">Projects</div></div>
+    <div class="stat-card"><div class="stat-icon">💻</div><div class="stat-value">6</div><div class="stat-label">Languages</div></div>
+    <div class="stat-card"><div class="stat-icon">🌐</div><div class="stat-value">5</div><div class="stat-label">Live Demos</div></div>
     <div class="stat-card"><div class="stat-icon">🌍</div><div class="stat-value">SL</div><div class="stat-label">Based In</div></div>
   </div>
 
@@ -211,7 +211,6 @@ body {
 
 <script>
 const API_PORTFOLIO = "https://solene-18a0e0a8.base44.app/functions/portfolioApi";
-const API_LOGIN = "https://solene-18a0e0a8.base44.app/functions/portfolioLogin";
 
 // All projects with demo links
 const projects = [
@@ -257,11 +256,59 @@ const projects = [
   },
   {
     num: 6,
+    name: "VAYAMA",
+    description: "Transport business management app. Handles operations, scheduling, and fleet management with a companion social module for community features and driver network management.",
+    tags: ["TypeScript", "Transport", "Base44"],
+    code: "https://github.com/crptoangel232/VAYAMA",
+    demo: null
+  },
+  {
+    num: 7,
+    name: "VAYAMA Social",
+    description: "Companion social module for the VAYAMA transport platform. Community features and driver network management.",
+    tags: ["TypeScript", "Social", "Transport"],
+    code: "https://github.com/crptoangel232/VAYAMA-social",
+    demo: null
+  },
+  {
+    num: 8,
+    name: "Wuya AI",
+    description: "Agricultural intelligence platform. AI-powered tools for farming optimization and agricultural decision-making.",
+    tags: ["TypeScript", "AI", "Agriculture"],
+    code: "https://github.com/crptoangel232/wuya-ai",
+    demo: null
+  },
+  {
+    num: 9,
+    name: "Wuya GTM",
+    description: "Go-to-market strategy and marketing platform for the Wuya agricultural intelligence project.",
+    tags: ["TypeScript", "CSS", "Marketing"],
+    code: "https://github.com/crptoangel232/wuya-gtm",
+    demo: null
+  },
+  {
+    num: 10,
+    name: "Verinum",
+    description: "App that sells virtual numbers. Built with Kotlin for Android.",
+    tags: ["Kotlin", "Android", "Mobile"],
+    code: "https://github.com/crptoangel232/Verinum",
+    demo: null
+  },
+  {
+    num: 11,
     name: "MAMIE",
     description: "An education system built on a verified network. Connecting learners with verified educational content and pathways.",
-    tags: ["AI", "Education", "TypeScript"],
+    tags: ["TypeScript", "Education", "AI"],
     code: "https://github.com/crptoangel232/MAMIE",
     demo: null
+  },
+  {
+    num: 12,
+    name: "My Portfolio Website",
+    description: "This portfolio website itself — a dashboard connecting all my projects with live demo links, contact form, and backend integration. Built with HTML, CSS, JavaScript, and Base44 backend functions.",
+    tags: ["HTML", "CSS", "JavaScript", "Base44"],
+    code: "https://github.com/crptoangel232/My-Portfolio-Website",
+    demo: "https://crptoangel232.github.io/My-Portfolio-Website/"
   }
 ];
 
