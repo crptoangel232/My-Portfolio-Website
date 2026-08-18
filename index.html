@@ -6,51 +6,46 @@
 <title>Albert Taylor — Portfolio</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#f5f2ed;color:#2a2622;line-height:1.65;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#e8e4db;color:#2a2622;line-height:1.65;}
 .wrap{max-width:680px;margin:0 auto;padding:60px 24px;}
-header{margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid #d9d4cb;}
-header .label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a7a4f;font-weight:600;margin-bottom:12px;}
+header{margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid #d4cec3;}
+header .label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#6d6354;font-weight:600;margin-bottom:12px;}
 header h1{font-family:Georgia,"Times New Roman",serif;font-size:38px;font-weight:400;letter-spacing:-0.5px;margin-bottom:12px;}
 header p{font-size:16px;color:#6b6358;max-width:520px;}
 nav{display:flex;gap:24px;margin-top:20px;font-size:14px;}
-nav a{color:#8a7a4f;text-decoration:none;border-bottom:1px solid transparent;}
-nav a:hover{border-bottom-color:#8a7a4f;}
-
-.stats{display:flex;gap:32px;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid #d9d4cb;}
-.stat .val{font-family:Georgia,serif;font-size:28px;font-weight:400;color:#2a2622;}
+nav a{color:#6d6354;text-decoration:none;border-bottom:1px solid transparent;}
+nav a:hover{border-bottom-color:#6d6354;}
+.stats{display:flex;gap:32px;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid #d4cec3;}
+.stat .val{font-family:Georgia,serif;font-size:28px;font-weight:400;}
 .stat .lbl{font-size:12px;color:#9a9288;letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
-
 .section{margin-bottom:48px;}
 .section h2{font-family:Georgia,serif;font-size:20px;font-weight:400;margin-bottom:20px;}
-
-.project{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid #e8e3da;}
-.project:last-child{border-bottom:none;}
-.project .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
-.project h3{font-size:16px;font-weight:600;}
-.project .num{font-family:Georgia,serif;font-size:14px;color:#9a9288;}
-.project p{font-size:14px;color:#6b6358;margin-bottom:10px;max-width:560px;}
-.project .links{display:flex;gap:16px;font-size:13px;}
-.project .links a{color:#8a7a4f;text-decoration:none;border-bottom:1px solid transparent;}
-.project .links a:hover{border-bottom-color:#8a7a4f;}
-.project .links .none{color:#bfb6aa;font-size:13px;}
-
+.proj{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid #e0dbd1;}
+.proj:last-child{border-bottom:none;}
+.proj .pr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+.proj h3{font-size:16px;font-weight:600;}
+.proj .pn{font-family:Georgia,serif;font-size:14px;color:#9a9288;}
+.proj p{font-size:14px;color:#6b6358;margin-bottom:10px;max-width:560px;}
+.proj .pl{display:flex;gap:16px;font-size:13px;}
+.proj .pl a{color:#6d6354;text-decoration:none;border-bottom:1px solid transparent;}
+.proj .pl a:hover{border-bottom-color:#6d6354;}
+.proj .pl .none{color:#9a9288;}
 .contact{margin-bottom:48px;}
 .contact h2{font-family:Georgia,serif;font-size:20px;font-weight:400;margin-bottom:16px;}
 .field{margin-bottom:16px;}
-.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:#2a2622;}
-.field input,.field textarea{width:100%;padding:12px 14px;border:1px solid #d9d4cb;border-radius:2px;font-size:14px;font-family:inherit;color:#2a2622;background:#fff;}
-.field input:focus,.field textarea:focus{outline:none;border-color:#8a7a4f;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;}
+.field input,.field textarea{width:100%;padding:12px 14px;border:1px solid #d4cec3;border-radius:2px;font-size:14px;font-family:inherit;color:#2a2622;background:#ffffff;}
+.field input:focus,.field textarea:focus{outline:none;border-color:#6d6354;}
 .field textarea{min-height:80px;resize:vertical;}
 .row2{display:flex;gap:16px;}
 .row2 .field{flex:1;}
-.btn{padding:12px 28px;background:#2a2622;color:#f5f2ed;border:none;border-radius:2px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;}
-.btn:hover{background:#3a3530;}
+.btn{padding:12px 28px;background:#2a2622;color:#e8e4db;border:none;border-radius:2px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;}
+.btn:hover{opacity:0.85;}
 .btn:disabled{opacity:0.5;}
 .alert{padding:10px 14px;border-radius:2px;margin-bottom:16px;font-size:13px;display:none;}
-.alert.ok{background:#e8ede8;border:1px solid #b5c9b5;color:#3d5a3d;}
-.alert.err{background:#f0e8e5;border:1px solid #d4b5a8;color:#8b3a2e;}
-
-footer{padding-top:24px;border-top:1px solid #d9d4cb;font-size:13px;color:#9a9288;display:flex;justify-content:space-between;}
+.alert.ok{background:#f2efe9;border:1px solid #d4cec3;color:#6d6354;}
+.alert.err{background:#f2efe9;border:1px solid #d4cec3;color:#c0493a;}
+footer{padding-top:24px;border-top:1px solid #d4cec3;font-size:13px;color:#9a9288;display:flex;justify-content:space-between;}
 footer a{color:#6b6358;text-decoration:none;}
 footer a:hover{text-decoration:underline;}
 @media(max-width:600px){.wrap{padding:40px 20px;}header h1{font-size:28px;}.stats{flex-wrap:wrap;gap:20px;}.row2{flex-direction:column;}footer{flex-direction:column;gap:8px;}}
@@ -67,89 +62,75 @@ footer a:hover{text-decoration:underline;}
 <a href="#contact">Contact</a>
 </nav>
 </header>
-
 <div class="stats">
 <div class="stat"><div class="val">12</div><div class="lbl">Projects</div></div>
 <div class="stat"><div class="val">6</div><div class="lbl">Languages</div></div>
 <div class="stat"><div class="val">11</div><div class="lbl">Live Demos</div></div>
 </div>
-
 <section class="section">
 <h2>Projects</h2>
 
-<div class="project">
-<div class="row"><h3>PhishGuard</h3><span class="num">01</span></div>
-<p>10-tool cybersecurity suite. Phishing detector, port scanner, password auditor, SIEM dashboard, incident response playbooks.</p>
-<div class="links"><a href="https://crptoangel232.github.io/phishguard/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/phishguard" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>PhishGuard</h3><span class="pn">01</span></div>
+<p>10-tool cybersecurity suite. Phishing detector, port scanner, password auditor, SIEM dashboard.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/phishguard/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/phishguard" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>Oracle Trading Engine</h3><span class="num">02</span></div>
-<p>Autonomous AI trading platform. Multi-strategy analysis, risk management, broker integration. 16 entities, 10 strategies.</p>
-<div class="links"><a href="https://crptoangel232.github.io/oracle-trading-engine/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/oracle-trading-engine" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>Oracle Trading Engine</h3><span class="pn">02</span></div>
+<p>Autonomous AI trading platform. Multi-strategy analysis, risk management, broker integration.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/oracle-trading-engine/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/oracle-trading-engine" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>Oswok AI</h3><span class="num">03</span></div>
-<p>AI-powered economic mobility engine for Africa. WhatsApp workforce OS for skill discovery, micro-learning, verified tasks.</p>
-<div class="links"><a href="https://crptoangel232.github.io/oswok-ai/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/oswok-ai" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>Oswok AI</h3><span class="pn">03</span></div>
+<p>AI-powered economic mobility engine for Africa. WhatsApp workforce OS.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/oswok-ai/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/oswok-ai" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>hushBox</h3><span class="num">04</span></div>
-<p>Movie discovery app. Search, browse, and build a watchlist. Vanilla JS with the TMDB API.</p>
-<div class="links"><a href="https://crptoangel232.github.io/hushbox/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/hushbox" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>hushBox</h3><span class="pn">04</span></div>
+<p>Movie discovery app. Search, browse, and build a watchlist. Vanilla JS with TMDB API.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/hushbox/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/hushbox" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>My First Website</h3><span class="num">05</span></div>
-<p>Where it started. An animated login page with a boy coding at a desk. Pure HTML and CSS, no JavaScript.</p>
-<div class="links"><a href="https://crptoangel232.github.io/My-Portfolio-Website/first-website.html" target="_blank">Demo</a><a href="https://github.com/crptoangel232/My-Portfolio-Website" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>My First Website</h3><span class="pn">05</span></div>
+<p>Where it started. Animated login page. Pure HTML and CSS, no JavaScript.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/My-Portfolio-Website/first-website.html" target="_blank">Demo</a><a href="https://github.com/crptoangel232/My-Portfolio-Website" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>VAYAMA</h3><span class="num">06</span></div>
-<p>Transport operations platform. Fleet management, scheduling, AI booking, and analytics for transport operators.</p>
-<div class="links"><a href="https://crptoangel232.github.io/VAYAMA/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/VAYAMA" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>VAYAMA</h3><span class="pn">06</span></div>
+<p>Transport operations platform. Fleet management, scheduling, AI booking.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/VAYAMA/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/VAYAMA" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>VAYAMA Social</h3><span class="num">07</span></div>
-<p>Driver community network for the VAYAMA platform. Ratings, verified profiles, and a feed for operators.</p>
-<div class="links"><a href="https://crptoangel232.github.io/VAYAMA-social/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/VAYAMA-social" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>VAYAMA Social</h3><span class="pn">07</span></div>
+<p>Driver community network. Ratings, verified profiles, feed.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/VAYAMA-social/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/VAYAMA-social" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>Wuya</h3><span class="num">08</span></div>
-<p>Agricultural intelligence. Crop monitoring, pest detection, yield analytics, and supply chain tools for West African farmers.</p>
-<div class="links"><a href="https://crptoangel232.github.io/wuya-ai/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/wuya-ai" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>Wuya</h3><span class="pn">08</span></div>
+<p>Agricultural intelligence. Crop monitoring, pest detection, yield analytics.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/wuya-ai/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/wuya-ai" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>WUYA GTM</h3><span class="num">09</span></div>
-<p>Go-to-market for Wuya. Field teams report at-risk produce, the system prioritizes by urgency, and matches sellers to buyers.</p>
-<div class="links"><a href="https://crptoangel232.github.io/wuya-gtm/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/wuya-gtm" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>WUYA GTM</h3><span class="pn">09</span></div>
+<p>Go-to-market for Wuya. Spoilage reporting, urgency ranking, buyer matching.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/wuya-gtm/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/wuya-gtm" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>Verinum</h3><span class="num">10</span></div>
-<p>Virtual number marketplace. Kotlin Android app — no web demo available.</p>
-<div class="links"><span class="none">No demo</span><a href="https://github.com/crptoangel232/Verinum" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>Verinum</h3><span class="pn">10</span></div>
+<p>Virtual number marketplace. Kotlin Android app.</p>
+<div class="pl"><span class="none">No demo</span><a href="https://github.com/crptoangel232/Verinum" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>MAMIE</h3><span class="num">11</span></div>
-<p>Verified education network. Trusted content, structured pathways, and certificates that employers can verify.</p>
-<div class="links"><a href="https://crptoangel232.github.io/MAMIE/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/MAMIE" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>MAMIE</h3><span class="pn">11</span></div>
+<p>Verified education network. Trusted content, pathways, verifiable certificates.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/MAMIE/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/MAMIE" target="_blank">Source</a></div>
 </div>
-
-<div class="project">
-<div class="row"><h3>This Portfolio</h3><span class="num">12</span></div>
-<p>The page you are looking at. HTML, CSS, JavaScript, and a Base44 backend for the contact form.</p>
-<div class="links"><a href="https://crptoangel232.github.io/My-Portfolio-Website/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/My-Portfolio-Website" target="_blank">Source</a></div>
+<div class="proj">
+<div class="pr"><h3>This Portfolio</h3><span class="pn">12</span></div>
+<p>The page you are looking at. HTML, CSS, JavaScript, Base44 backend.</p>
+<div class="pl"><a href="https://crptoangel232.github.io/My-Portfolio-Website/" target="_blank">Demo</a><a href="https://github.com/crptoangel232/My-Portfolio-Website" target="_blank">Source</a></div>
 </div>
 </section>
-
 <section class="contact" id="contact">
 <h2>Contact</h2>
 <div class="alert" id="alertBox"></div>
@@ -160,20 +141,18 @@ footer a:hover{text-decoration:underline;}
 <div class="field"><label>Message</label><textarea id="cMsg" placeholder="What do you need?"></textarea></div>
 <button class="btn" id="cBtn" onclick="send()">Send</button>
 </section>
-
 <footer>
 <span>Albert Taylor — Sierra Leone</span>
 <a href="https://github.com/crptoangel232" target="_blank">github.com/crptoangel232</a>
 </footer>
 </div>
-
 <script>
-function show(msg,ok){var e=document.getElementById("alertBox");e.textContent=msg;e.className="alert "+(ok?"ok":"err");e.style.display="block";setTimeout(function(){e.style.display="none"},5000);}
+function show(m,ok){var e=document.getElementById("alertBox");e.textContent=m;e.className="alert "+(ok?"ok":"err");e.style.display="block";setTimeout(function(){e.style.display="none"},5000);}
 function send(){
 var n=document.getElementById("cName").value.trim(),e=document.getElementById("cEmail").value.trim(),m=document.getElementById("cMsg").value.trim(),b=document.getElementById("cBtn");
 if(!n||!e||!m){show("Fill in all fields",false);return;}
 b.disabled=true;b.textContent="Sending...";
-fetch("https://solene-18a0e0a8.base44.app/functions/portfolioApi",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"contact",name:n,email:e,message:m})}).then(function(r){return r.json()}).then(function(d){if(d.success){show(d.message,true);document.getElementById("cName").value="";document.getElementById("cEmail").value="";document.getElementById("cMsg").value="";}else{show(d.message||"Failed",false);}}).catch(function(err){show("Connection error",false);}).then(function(){b.disabled=false;b.textContent="Send";});
+fetch("https://solene-18a0e0a8.base44.app/functions/portfolioApi",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"contact",name:n,email:e,message:m})}).then(function(r){return r.json()}).then(function(d){if(d.success){show(d.message,true);document.getElementById("cName").value="";document.getElementById("cEmail").value="";document.getElementById("cMsg").value="";}else{show(d.message||"Failed",false);}}).catch(function(){show("Connection error",false);}).then(function(){b.disabled=false;b.textContent="Send";});
 }
 </script>
 </body>
